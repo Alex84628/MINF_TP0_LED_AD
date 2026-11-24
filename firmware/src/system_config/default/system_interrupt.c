@@ -71,13 +71,13 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 void __ISR(_TIMER_1_VECTOR, ipl1AUTO) IntHandlerDrvTmrInstance0(void)
 {
-    static uint32_t TempsInit = 0;
+    static uint32_t TempsInit = 0;//compteur pour le temps d'initialisation
     
     PLIB_INT_SourceFlagClear(INT_ID_0,INT_SOURCE_TIMER_1);    
-    TempsInit++;
-    if (TempsInit >= 30)
+    TempsInit++;//incrémente le compteur du temps d'initialisation
+    if (TempsInit >= 30)//Si les 3s sont passé le callback se produis toute les 100ms
     {
-            APP_TMR_Callbck();       
+            APP_TMR_Callbck(); //se produis toute les 100ms      
     }
 }
 /*******************************************************************************
