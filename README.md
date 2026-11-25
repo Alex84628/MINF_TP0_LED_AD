@@ -1,5 +1,5 @@
 Configuration du timer 1 :
-Pour obtenir un cycle de 100ms, il faut configurer le timer 1. On peut y modifier le presceler et le nombre de pas. Il faut faire attantion car le timer fonctionne en 16bit, Ce qui veut dire que le nombre de pas ne dois pas depasser la valeur 65535. Pour evitez ce problème, j'ai mits la valeur maximum du presceler (256). Il reste a definir le nombre de pas avec ce calcule :
+Pour obtenir un cycle de 100ms, il faut configurer le timer 1. On peut y modifier le presceler et le nombre de pas. Il faut faire attantion car le timer fonctionne en 16bit, Ce qui veut dire que le nombre de pas ne dois pas depasser la valeur 65535. Pour evitez ce problème, j'ai mits la valeur maximum du presceler (256). Il reste à definir le nombre de pas avec ce calcule :
 
 Nombre de pas = tcycle * fmicro / presceler = 100ms * 80MHz / 256 = 31250
 
